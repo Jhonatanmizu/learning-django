@@ -1,5 +1,5 @@
 
-from django.urls import path
+from django.urls import path # type: ignore
 from . import views as home_views
 
 
