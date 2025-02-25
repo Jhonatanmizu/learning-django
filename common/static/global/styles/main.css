@@ -16,3 +16,26 @@ body {
   background-color: #9f774f;
   font-size: 1.6rem;
 }
+
+.posts {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.post {
+  background-color: #f2f2f2;
+  border-radius: 1.6rem;
+  padding: 1.5rem;
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.2);
+  color: #4b4b4b;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .posts {
+    grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+  }
+}

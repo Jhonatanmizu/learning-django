@@ -1,3 +1,20 @@
-{% extends "global/templates/base.html" %} {% block content %}
-<h1>Welcome to the Blog Page!</h1>
+{% extends "global/templates/base.html" %}
+
+
+{% block content %}
+<h1>{{title}}</h1>
+{% if description %}
+<h2>{{description}}</h2>
+
+{% endif %}
 {% endblock content %}
+
+{% block posts %} 
+
+{% for post in posts %}
+
+{% include "global/partials/postblock.html" %}
+
+{% endfor %}
+
+{% endblock posts %}
