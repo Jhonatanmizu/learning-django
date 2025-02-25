@@ -3,6 +3,8 @@
   {% include "global/partials/head.html" %}
   <body>
     {% include "global/partials/header.html" %}
-    {% block content %} content {% endblock %}
+     {% block content %}content{% endblock content %}
+    <main class="posts">
+      {% block posts %} posts{% endblock posts %}
   </body>
 </html>
