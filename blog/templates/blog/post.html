@@ -1,0 +1,26 @@
+{% extends "global/templates/base.html" %}
+
+
+{% block content %}
+<h1>{{title}}</h1>
+{% if description %}
+<h2>{{description}}</h2>
+
+{% endif %}
+{% endblock content %}
+
+{% block posts %} 
+
+<article class="post post__unique">
+    <header>
+      <h2 class="post__title">
+        <a href="{% url 'blog:post' post.id %}">{{post.title}}</a>
+      </h2>
+    </header>
+    <div class="post__body">
+      <p>{{post.body}}</p>
+    </div>
+  </article>
+  
+
+{% endblock posts %}
